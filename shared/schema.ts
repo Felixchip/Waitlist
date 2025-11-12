@@ -19,11 +19,13 @@ export type User = typeof users.$inferSelect;
 
 export const waitlistSignups = pgTable("waitlist_signups", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  firstName: text("first_name").notNull(),
   email: text("email").notNull().unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
 export const insertWaitlistSignupSchema = createInsertSchema(waitlistSignups).pick({
+  firstName: true,
   email: true,
 });
 
