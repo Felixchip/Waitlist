@@ -1,13 +1,13 @@
-import { SiGoogle, SiMicrosoft, SiAmazon, SiIbm, SiMeta, SiApple } from "react-icons/si";
+import { SiGoogle, SiAmazon, SiNetflix, SiMeta, SiApple, SiOpenai } from "react-icons/si";
 
 export default function SocialProof() {
   const logos = [
     { Icon: SiGoogle, name: "Google" },
-    { Icon: SiMicrosoft, name: "Microsoft" },
     { Icon: SiAmazon, name: "Amazon" },
-    { Icon: SiIbm, name: "IBM" },
+    { Icon: SiNetflix, name: "Netflix" },
     { Icon: SiMeta, name: "Meta" },
     { Icon: SiApple, name: "Apple" },
+    { Icon: SiOpenai, name: "OpenAI" },
   ];
 
   return (
