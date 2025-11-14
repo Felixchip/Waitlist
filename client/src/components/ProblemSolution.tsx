@@ -1,50 +1,107 @@
-import { Card } from "@/components/ui/card";
-import { AlertCircle, CheckCircle2, TrendingDown, Users, Clock } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { CheckCircle } from "lucide-react";
+import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1.png";
+import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
+import avatar3 from "@assets/generated_images/Professional_woman_avatar_2_3545e852.png";
+import avatar4 from "@assets/generated_images/Professional_man_avatar_2_0f216362.png";
+import avatar5 from "@assets/generated_images/Professional_woman_avatar_3_1b5ce47e.png";
+import avatar6 from "@assets/generated_images/Professional_man_avatar_3_4dcedec3.png";
+import avatar7 from "@assets/generated_images/Professional_woman_avatar_4_63e59b24.png";
+import avatar8 from "@assets/generated_images/Professional_man_avatar_4_04f7ec27.png";
 
-export default function ProblemSolution() {
-  const problems = [
-    { icon: Users, text: "Struggling to track top fans vs. casual subscribers" },
-    { icon: TrendingDown, text: "Missing renewal opportunities and losing revenue" },
-    { icon: Clock, text: "Wasting time with complex agency tools" },
-  ];
+export default function WaitlistForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const { toast } = useToast();
 
-  const solutions = [
-    { title: "Auto-categorize fans", desc: "Top Supporters, At Risk, Expired — updated automatically" },
-    { title: "Smart engagement alerts", desc: "Know exactly who to message and when" },
-    { title: "Creator-first simplicity", desc: "Built for solo creators, not agencies" },
-  ];
+  const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
+
+  const signupMutation = useMutation({
+    mutationFn: async (data: { firstName: string; email: string }) => {
+      return apiRequest("/api/waitlist", "POST", data);
+    },
+    onSuccess: () => {
+      toast({
+        title: "You're in!",
+        description: "We'll notify you when Gentheri launches.",
+      });
+      setName("");
+      setEmail("");
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    signupMutation.mutate({ firstName: name, email });
+  };
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section className="py-32 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">The Problem</h2>
-            <div className="space-y-4">
-              {problems.map((problem, idx) => (
-                <div key={idx} className="flex items-start gap-4" data-testid={`problem-${idx}`}>
-                  <AlertCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                  <p className="text-lg text-foreground">{problem.text}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Join waitlist
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="h-14 px-6 bg-card border-gray-800 text-base"
+                data-testid="input-waitlist-name"
+              />
+              <Input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="h-14 px-6 bg-card border-gray-800 text-base"
+                data-testid="input-waitlist-email"
+              />
+              <Button
+                type="submit"
+                disabled={signupMutation.isPending}
+                className="h-14 px-8 w-full font-medium"
+                data-testid="button-waitlist-submit"
+              >
+                {signupMutation.isPending ? "Joining..." : "Get early access"}
+              </Button>
+            </form>
           </div>
 
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">The Solution</h2>
-            <div className="space-y-6">
-              {solutions.map((solution, idx) => (
-                <Card key={idx} className="p-6 hover-elevate" data-testid={`solution-${idx}`}>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.desc}</p>
-                    </div>
-                  </div>
-                </Card>
+          <div className="space-y-8">
+            <div className="flex -space-x-4">
+              {avatars.map((avatar, idx) => (
+                <Avatar key={idx} className="w-16 h-16 border-4 border-background">
+                  <AvatarImage src={avatar} alt={`User ${idx + 1}`} />
+                  <AvatarFallback>U{idx + 1}</AvatarFallback>
+                </Avatar>
               ))}
             </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <p className="text-gray-400 text-sm uppercase tracking-wider">
+                JOIN 20K OTHERS
+              </p>
+            </div>
+            <p className="text-sm text-gray-500">You</p>
           </div>
         </div>
       </div>
