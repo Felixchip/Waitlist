@@ -64,13 +64,15 @@ export default function Hero() {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <Badge 
-              variant="outline" 
-              className="mb-8 border-gray-800 text-gray-400 bg-transparent px-4 py-1.5 text-xs tracking-wider"
+            <div 
+              className="mb-8 px-3 py-1.5 text-xs tracking-wider text-white rounded-full w-fit backdrop-blur-sm"
+              style={{
+                background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
+              }}
               data-testid="badge-launching-soon"
             >
               LAUNCHING SOON
-            </Badge>
+            </div>
             
             <h1 
               className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight"

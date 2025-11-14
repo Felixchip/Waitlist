@@ -23,9 +23,17 @@ export default function Benefits() {
   return (
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-7xl">
-        <p className="text-xs text-gray-500 mb-4 tracking-wider uppercase text-center" data-testid="label-benefits">
-          BENEFITS
-        </p>
+        <div className="flex justify-center mb-6">
+          <div 
+            className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm"
+            style={{
+              background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
+            }}
+            data-testid="badge-benefits"
+          >
+            BENEFITS
+          </div>
+        </div>
         <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center max-w-3xl mx-auto">
           Why join the Gentheri waitlist?
         </h2>

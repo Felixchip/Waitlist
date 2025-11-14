@@ -10,13 +10,15 @@ export default function Features() {
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <Badge 
-            variant="outline" 
-            className="mb-6 border-gray-800 text-gray-400 bg-transparent px-4 py-1.5 text-xs tracking-wider"
+          <div 
+            className="mb-6 px-3 py-1.5 text-xs tracking-wider text-white rounded-full inline-block backdrop-blur-sm"
+            style={{
+              background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
+            }}
             data-testid="badge-features"
           >
             FEATURES
-          </Badge>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
             <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
               What you get<br />
