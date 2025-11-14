@@ -17,13 +17,16 @@ export default function Features() {
           >
             FEATURES
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto">
-            What you get{" "}
-            <span className="text-purple-400">early access to</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+              What you get<br />
+              early access to
+            </span>
           </h2>
           
-          <p className="text-gray-400 max-w-2xl mx-auto text-base">
-            Gentheri helps forward-thinking teams integrate cutting-edge AI into their workflows — from research to real-time operations.
+          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            Gentheri helps forward-thinking teams integrate cutting-edge<br />
+            AI into their workflows — from research to real-time operations.
           </p>
         </div>
 
