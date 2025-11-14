@@ -1,163 +1,168 @@
 # FanBase CRM Waitlist Landing Page - Design Guidelines
 
 ## Design Approach
-**Reference-Based Approach**: Drawing inspiration from CreatorHero's bold, modern aesthetic while adapting for individual creators rather than agencies. This combines confidence-building visual impact with creator-focused messaging.
+**Reference-Based**: Inspired by Gentheri's dark minimalist aesthetic - pitch black backgrounds, clean white typography, generous breathing room, and bento-style grids. This creates a premium, modern AI-product feel while maintaining creator-focused messaging.
 
 ## Typography System
-- **Primary Font**: Inter or DM Sans (Google Fonts)
-- **Headline**: Bold (700), 48-64px desktop / 32-40px mobile
-- **Subheadline**: Medium (500), 20-24px desktop / 16-18px mobile
-- **Body**: Regular (400), 16-18px desktop / 14-16px mobile
-- **Metrics/Stats**: Bold (700), 36-48px for impact numbers
-- **Buttons**: Semibold (600), 16px
+- **Primary Font**: Inter (Google Fonts)
+- **Hero Headline**: Bold (700), 56-72px desktop / 36-48px mobile
+- **Section Headlines**: Semibold (600), 36-48px desktop / 28-36px mobile
+- **Subheadline**: Regular (400), 18-22px desktop / 16-18px mobile, text-gray-400
+- **Body Text**: Regular (400), 16-18px, text-gray-300
+- **Feature Titles**: Medium (500), 20-24px
+- **Stats/Numbers**: Bold (700), 48-64px
+- **Buttons**: Medium (500), 16px
 
 ## Layout & Spacing System
-**Tailwind Units**: Consistently use 4, 6, 8, 12, 16, 20, 24, 32 for spacing
-- Section padding: py-20 to py-32 desktop, py-12 to py-16 mobile
+**Tailwind Units**: 6, 8, 12, 16, 20, 24, 32, 40
+- Section padding: py-32 to py-40 desktop, py-16 to py-20 mobile
 - Container: max-w-7xl with px-6 to px-8
-- Component gaps: gap-8 to gap-12 for feature grids
-- Vertical rhythm: space-y-6 for content sections
+- Bento grid gaps: gap-4 to gap-6
+- Generous whitespace: space-y-12 to space-y-16 between major elements
 
 ## Page Structure & Sections
 
-### 1. Hero Section (80vh minimum)
-- **Layout**: Centered content with full-width gradient background
-- **Elements**: 
-  - Logo top-left (h-8 to h-10)
-  - Main headline emphasizing "for creators" positioning
-  - Supporting subtext (max-w-2xl centered)
-  - Prominent email capture form (inline, max-w-md)
-  - Form: Email input + "Join Waitlist" button side-by-side on desktop, stacked mobile
-  - Small trust indicator below form: "Join 500+ creators on the waitlist"
-- **Background**: Use gradient image/pattern similar to CreatorHero's energy
+### 1. Hero Section (90vh)
+- **Layout**: Centered content on pitch black background
+- **Elements**:
+  - Small logo/wordmark top-center (h-8)
+  - Large hero headline (max-w-4xl centered): "Your fans are slipping away. We'll help you keep them."
+  - Subtext (max-w-2xl centered, text-gray-400)
+  - Email capture form inline (max-w-md centered)
+  - Form: Input + button side-by-side, both with subtle borders, input bg-black
+  - Waitlist counter below: "2,847 creators waiting" with small avatars row (8-10 overlapping circles)
+- **Background**: Pure black (bg-black), no gradients
 
-### 2. Social Proof Strip
-- **Layout**: Full-width, py-8
-- **Content**: Sliding/static row of creator avatars or placeholder logos
-- **Text**: "Trusted by creators earning $1k-$10k/month"
+### 2. Logo Carousel Strip
+- **Layout**: Full-width, py-16, border-t border-b border-gray-900
+- **Content**: Horizontal scrolling/auto-sliding row of creator platform logos (Patreon, OnlyFans, Substack, etc.)
+- **Style**: Logos in grayscale/white, opacity-60
 
-### 3. Problem/Solution Section
-- **Layout**: Two-column grid (lg:grid-cols-2), gap-16
-- **Left Column**: 
-  - "The Problem" heading
-  - 3-4 pain points as bullet list with icons
-  - Each point: Icon (w-6 h-6) + text
-- **Right Column**:
-  - "The Solution" heading
-  - 2-3 key benefits
-  - Each benefit highlighted with subtle background cards (p-6, rounded-2xl)
+### 3. Problem Statement Section
+- **Layout**: Centered single column, max-w-3xl
+- **Content**:
+  - Headline: "The $10k/month creator's dilemma"
+  - 3-4 pain points in large text blocks (text-xl, text-gray-300)
+  - Each separated by generous vertical spacing (space-y-8)
+  - Pull quote style: border-l-2 border-white, pl-6
 
-### 4. Features Preview (3-Column Grid)
-- **Layout**: grid-cols-1 md:grid-cols-2 lg:grid-cols-3, gap-8
-- **Feature Cards** (per card):
-  - Icon at top (w-12 h-12)
-  - Feature title (text-xl font-semibold)
-  - Description (2-3 lines, text-base)
-  - Subtle card styling: p-8, rounded-2xl, border treatment
-- **Features to showcase**:
-  1. Smart Fan Categories (auto-tagging)
-  2. Engagement Reminders
-  3. Analytics Dashboard
-  4. Re-engagement Templates
-  5. Churn Prevention
-  6. Revenue Insights
+### 4. Features Bento Grid
+- **Layout**: Asymmetric bento-style grid using CSS Grid
+  - Desktop: 3 columns, varied row spans
+  - 2 large feature cards (span 2 rows)
+  - 4 smaller feature cards (single height)
+- **Card Styling**: 
+  - bg-gray-950, border border-gray-900, rounded-2xl, p-8 to p-12
+  - Each card: Icon (w-10 h-10), title, description, micro-feature visual
+- **Features**:
+  1. Smart Fan Categories (large card with category preview)
+  2. Engagement Reminders (small card)
+  3. Analytics Dashboard (large card with mini chart visual)
+  4. Re-engagement Templates (small card)
+  5. Churn Prevention Alerts (small card)
+  6. Revenue Insights (small card)
 
-### 5. Product Mockup Section
-- **Layout**: Single column, centered
-- **Content**: 
-  - Subheading: "See it in action"
-  - Large mockup image showing dashboard interface (max-w-5xl)
-  - Image treatment: rounded-xl with subtle shadow
-- **Callouts**: 2-3 floating labels pointing to key UI elements
+### 5. Product Preview Section
+- **Layout**: Full-width dark section, py-40
+- **Content**:
+  - Centered headline: "Built for creators who care about retention"
+  - Large dashboard mockup image (max-w-6xl, rounded-xl, border border-gray-900)
+  - Floating UI callouts (3-4 small cards pointing to features, absolute positioned)
 
-### 6. Testimonials/Early Feedback
-- **Layout**: grid-cols-1 md:grid-cols-2 lg:grid-cols-3, gap-6
-- **Cards** (3-4 testimonials):
-  - Quote text (italic)
-  - Creator avatar placeholder (w-12 h-12, rounded-full)
-  - Name + earnings tier (e.g., "$5k/month creator")
-  - Star rating visual (5 stars)
-  - Card: p-6, rounded-xl
+### 6. Social Proof Grid
+- **Layout**: 3-column grid (lg:grid-cols-3), gap-6
+- **Cards**: 6 testimonial cards
+  - Each: bg-gray-950, border border-gray-900, rounded-xl, p-6
+  - Quote text (text-gray-300)
+  - Creator avatar (w-12 h-12, rounded-full, border-2 border-gray-800)
+  - Name + earnings tier below avatar
+  - 5-star rating (small stars)
 
 ### 7. Stats Banner
-- **Layout**: Full-width accent section, py-16
-- **Content**: 3-column grid showcasing metrics
-  - "500+ Creators Waiting"
-  - "30% Average Renewal Increase" (projected)
-  - "5 Minutes Setup Time"
-- **Typography**: Large bold numbers above descriptive text
+- **Layout**: Full-width, py-24, border-y border-gray-900
+- **Content**: 3-column stats grid
+  - "2,847 Creators Waiting"
+  - "30% Avg. Renewal Lift"
+  - "5 Min Setup"
+- **Style**: Large numbers (text-6xl font-bold), small descriptive text below (text-gray-400)
 
-### 8. Final CTA Section
-- **Layout**: Centered, py-24
+### 8. FAQ Section
+- **Layout**: Centered, max-w-3xl
 - **Elements**:
-  - Compelling headline: "Ready to retain more fans?"
-  - Email capture form (repeated, max-w-md)
-  - Small text: "No credit card required. Launch notification only."
-  - Trust badge: "Launching Q2 2025"
+  - "Frequently Asked Questions" headline
+  - Accordion component: 6-8 questions
+  - Each item: border-b border-gray-900, py-6
+  - Question (text-lg font-medium), expandable answer (text-gray-400)
+  - Chevron icon right-aligned
 
-### 9. Footer
-- **Layout**: Three-column grid (collapse to single on mobile), py-12
-- **Columns**:
-  - **Left**: Logo + tagline
-  - **Center**: Quick links (About, Features, Privacy, Terms)
-  - **Right**: Social icons + "Contact" email
-- **Bottom**: Copyright line, text-sm, opacity-70
+### 9. Final CTA Section
+- **Layout**: Centered, py-32
+- **Elements**:
+  - Headline: "Join the waitlist"
+  - Subtext: "Be the first to know when we launch in Q2 2025"
+  - Email form (repeated, max-w-md)
+  - Small text: "No spam. Launch notification only."
+
+### 10. Footer
+- **Layout**: py-12, border-t border-gray-900
+- **Content**: 
+  - Centered logo + tagline
+  - Footer links row (About, Privacy, Terms, Contact) - text-sm, text-gray-500
+  - Copyright text-xs, text-gray-600
 
 ## Component Specifications
 
-### Email Capture Form
-- **Desktop**: flex row with input (flex-1) + button
-- **Input**: h-12, px-4, rounded-lg, text-base
-- **Button**: h-12, px-8, rounded-lg, font-semibold, backdrop-blur when on hero
-- **Mobile**: Stack vertically with w-full on both
+### Email Forms
+- Input: h-14, px-6, bg-black, border-2 border-gray-800, rounded-xl, text-white, placeholder-gray-500
+- Button: h-14, px-8, bg-white, text-black, rounded-xl, font-medium
+- Desktop: flex-row, mobile: stack w-full
+- Button on dark bg: backdrop-blur-md, bg-white/90
 
-### Cards/Containers
-- **Feature Cards**: p-6 to p-8, rounded-2xl, border-2 or subtle shadow
-- **Testimonial Cards**: p-6, rounded-xl, border treatment
-- **All cards**: Consistent hover state (subtle lift/shadow increase)
+### Bento Cards
+- Background: bg-gray-950 or bg-gray-900 for variation
+- Border: border-gray-900 or border-gray-800
+- Padding: p-8 to p-12 depending on card size
+- Rounded: rounded-2xl to rounded-3xl
+- Hover: subtle border-white/10 glow (minimal animation)
 
 ### Icons
-- **Library**: Heroicons (outline for most, solid for emphasis)
-- **Sizes**: w-6 h-6 for inline, w-12 h-12 for feature headers
+- **Library**: Heroicons outline
+- **Sizes**: w-10 h-10 for feature cards, w-6 h-6 for inline
 
-### Buttons
-- **Primary CTA**: Prominent, high-contrast, h-12 to h-14
-- **Secondary**: Ghost/outline style
-- **Hover states**: Subtle scale (scale-105) and brightness shift
+### Avatars
+- Waitlist avatars: w-10 h-10, border-2 border-black, -ml-3 for overlap
+- Testimonial avatars: w-12 h-12, border-2 border-gray-800
 
 ## Images Section
 
 ### Hero Background
-- **Description**: Modern gradient mesh or abstract background pattern, energetic and professional
-- **Placement**: Full-width hero section background
-- **Style**: Purple/pink/blue gradients with soft geometric shapes or grid patterns, similar to CreatorHero aesthetic
+**Type**: None - pure black background for maximum contrast
 
 ### Product Mockup
-- **Description**: Dashboard interface showing fan categories, analytics cards, and smart lists
-- **Placement**: Product preview section, centered
-- **Details**: Should show clear UI elements like "Top Supporters" category, engagement timeline, and renewal alerts
-- **Size**: Large (1200-1400px wide), rounded corners, subtle shadow
+**Description**: Full dashboard interface showing dark-themed UI with fan categories, engagement timeline, and analytics cards. Interface should use dark gray panels (bg-gray-900) with white text and colored accent elements.
+**Placement**: Product preview section, centered
+**Size**: 1400px wide, rounded-xl with subtle border
+**Treatment**: border border-gray-900, shadow-2xl
 
-### Creator Avatars (Social Proof)
-- **Description**: Circular placeholder avatars representing diverse creators
-- **Placement**: Social proof strip below hero
-- **Quantity**: 10-12 avatars in horizontal row
+### Creator Avatars
+**Description**: Circular profile photos of diverse creators
+**Placement**: Below hero email form (8-10 avatars overlapping), testimonial cards
+**Sizes**: Hero: w-10 h-10, Testimonials: w-12 h-12
 
-### Testimonial Avatars
-- **Description**: Small circular avatars for testimonial authors
-- **Placement**: Within testimonial cards
-- **Size**: 48x48px, rounded-full
-
-**Note**: Hero section uses a large background image/gradient. Product mockup is the primary feature image.
+### Logo Carousel Images
+**Description**: Platform logos (Patreon, OnlyFans, Substack, Gumroad, Ko-fi, etc.) in white/grayscale
+**Placement**: Logo strip section
+**Treatment**: opacity-60, auto-scroll animation
 
 ## Responsive Behavior
-- **Desktop (lg)**: Multi-column layouts, generous spacing
-- **Tablet (md)**: 2-column for features, maintain readability
-- **Mobile**: Single column, reduce padding (py-12 vs py-20), stack form elements, maintain clear hierarchy
+- **Desktop**: Full bento grid, multi-column layouts, py-32 to py-40 spacing
+- **Tablet**: 2-column bento, reduce to py-20 spacing
+- **Mobile**: Single column, stack all grids, py-16 spacing, maintain visual hierarchy through typography scale
 
 ## Key Design Principles
-1. **Bold & Confident**: Large typography, strong CTAs, clear value props
-2. **Creator-First**: Language and visuals speak to individual creators, not agencies
-3. **Trust-Building**: Multiple touchpoints showing credibility (waitlist count, testimonials, clear metrics)
-4. **Action-Oriented**: Multiple email capture opportunities without being pushy
-5. **Clean & Modern**: Ample whitespace, rounded corners, contemporary aesthetic matching CreatorHero's energy
+1. **Dark Minimalism**: Pitch black backgrounds, clean white text, subtle gray accents only
+2. **Generous Spacing**: Extreme breathing room between sections (py-32+)
+3. **Bento Aesthetics**: Asymmetric grid layouts with varied card sizes
+4. **Subtle Borders**: Gray-900/gray-800 borders for card definition without harshness
+5. **Premium Feel**: Large typography, spacious padding, refined details
+6. **Minimal Animation**: Only subtle hover states, no distracting motion
