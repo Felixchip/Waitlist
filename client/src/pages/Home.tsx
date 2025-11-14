@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import SocialProof from "@/components/SocialProof";
 import Features from "@/components/Features";
 import Benefits from "@/components/ProductMockup";
 import FAQ from "@/components/Testimonials";
@@ -12,7 +11,6 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <SocialProof />
       <Features />
       <Benefits />
       <FAQ />
