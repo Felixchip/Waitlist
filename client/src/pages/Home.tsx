@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
-import ProblemSolution from "@/components/ProblemSolution";
+import WaitlistForm from "@/components/ProblemSolution";
 import Features from "@/components/Features";
-import ProductMockup from "@/components/ProductMockup";
-import Testimonials from "@/components/Testimonials";
-import StatsBar from "@/components/StatsBar";
+import Benefits from "@/components/ProductMockup";
+import FAQ from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -13,11 +12,10 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <SocialProof />
-      <ProblemSolution />
+      <WaitlistForm />
       <Features />
-      <ProductMockup />
-      <Testimonials />
-      <StatsBar />
+      <Benefits />
+      <FAQ />
       <FinalCTA />
       <Footer />
     </div>

@@ -1,15 +1,26 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { CheckCircle } from "lucide-react";
+import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1.png";
+import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
+import avatar3 from "@assets/generated_images/Professional_woman_avatar_2_3545e852.png";
+import avatar4 from "@assets/generated_images/Professional_man_avatar_2_0f216362.png";
+import avatar5 from "@assets/generated_images/Professional_woman_avatar_3_1b5ce47e.png";
+import avatar6 from "@assets/generated_images/Professional_man_avatar_3_4dcedec3.png";
+import avatar7 from "@assets/generated_images/Professional_woman_avatar_4_63e59b24.png";
+import avatar8 from "@assets/generated_images/Professional_man_avatar_4_04f7ec27.png";
 
 export default function FinalCTA() {
-  const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const { toast } = useToast();
+
+  const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 
   const signupMutation = useMutation({
     mutationFn: async (data: { firstName: string; email: string }) => {
@@ -17,10 +28,10 @@ export default function FinalCTA() {
     },
     onSuccess: () => {
       toast({
-        title: "Thanks! You're on the list.",
-        description: "We'll notify you when FanBase CRM launches.",
+        title: "You're in!",
+        description: "We'll notify you when Gentheri launches.",
       });
-      setFirstName("");
+      setName("");
       setEmail("");
     },
     onError: (error: any) => {
@@ -34,59 +45,65 @@ export default function FinalCTA() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    signupMutation.mutate({ firstName, email });
+    signupMutation.mutate({ firstName: name, email });
   };
 
   return (
-    <section className="py-24">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Ready to Retain More Fans?
-        </h2>
-        <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Join the waitlist and be the first to know when FanBase CRM launches
-        </p>
-
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
-          <div className="flex flex-col gap-3">
-            <Input
-              type="text"
-              placeholder="First name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-              className="h-12 px-4 text-base"
-              data-testid="input-final-cta-firstname"
-            />
-            <div className="flex flex-col sm:flex-row gap-3">
+    <section className="py-32 px-6 border-t border-gray-900">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Join waitlist
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="h-14 px-6 bg-card border-gray-800 text-base"
+                data-testid="input-final-cta-name"
+              />
               <Input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="h-12 px-4 text-base flex-1"
+                className="h-14 px-6 bg-card border-gray-800 text-base"
                 data-testid="input-final-cta-email"
               />
-              <Button 
-                type="submit" 
-                size="lg"
+              <Button
+                type="submit"
                 disabled={signupMutation.isPending}
-                className="h-12 px-8 font-semibold"
+                className="h-14 px-8 w-full font-medium"
                 data-testid="button-final-cta-submit"
               >
-                {signupMutation.isPending ? "Joining..." : "Join Waitlist"}
+                {signupMutation.isPending ? "Joining..." : "Get early access"}
               </Button>
-            </div>
+            </form>
           </div>
-        </form>
 
-        <p className="text-sm text-muted-foreground mb-2">
-          No credit card required. Launch notification only.
-        </p>
-        <Badge variant="outline" className="text-sm">
-          Launching Q2 2025
-        </Badge>
+          <div className="space-y-8">
+            <div className="flex -space-x-4">
+              {avatars.map((avatar, idx) => (
+                <Avatar key={idx} className="w-16 h-16 border-4 border-background">
+                  <AvatarImage src={avatar} alt={`User ${idx + 1}`} />
+                  <AvatarFallback>U{idx + 1}</AvatarFallback>
+                </Avatar>
+              ))}
+            </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <p className="text-gray-400 text-sm uppercase tracking-wider">
+                JOIN 20K OTHERS
+              </p>
+            </div>
+            <p className="text-sm text-gray-500">You</p>
+          </div>
+        </div>
       </div>
     </section>
   );
