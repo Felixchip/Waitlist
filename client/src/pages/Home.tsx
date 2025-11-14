@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
-import WaitlistForm from "@/components/ProblemSolution";
 import Features from "@/components/Features";
 import Benefits from "@/components/ProductMockup";
 import FAQ from "@/components/Testimonials";
@@ -14,7 +13,6 @@ export default function Home() {
       <Header />
       <Hero />
       <SocialProof />
-      <WaitlistForm />
       <Features />
       <Benefits />
       <FAQ />
