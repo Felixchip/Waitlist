@@ -143,14 +143,18 @@ export default function Hero() {
                   data-testid="input-hero-email"
                 />
               </div>
-              <Button
+              <button
                 type="submit"
                 disabled={signupMutation.isPending}
-                className="h-12 px-8 w-full font-medium bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white border-0"
+                className="w-full py-4 px-8 font-medium text-white rounded-lg disabled:opacity-50"
+                style={{
+                  background: 'linear-gradient(101deg, #9573de 0%, rgb(74, 120, 195) 0%, rgb(42, 21, 87) 15.4%, rgb(41, 15, 101) 22.56%, rgb(61, 72, 161) 36.38%, rgba(92, 145, 207, 0.7) 62.51%, rgba(250, 249, 254, 0.5) 79.44%, rgb(121, 58, 255) 100%)',
+                  boxShadow: 'inset 0px -4.48px 2.24px 0px rgba(0, 0, 0, 0.25), inset 0px 2.24px 1.12px 0px rgba(255, 255, 255, 0.25)',
+                }}
                 data-testid="button-hero-submit"
               >
                 {signupMutation.isPending ? "Joining..." : "Get early access →"}
-              </Button>
+              </button>
             </form>
 
             <div className="mt-6 flex items-center gap-3">
