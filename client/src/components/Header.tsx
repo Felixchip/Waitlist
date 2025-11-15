@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SiYoutube, SiLinkedin, SiGithub } from "react-icons/si";
+import { SiX } from "react-icons/si";
 
 export default function Header() {
   return (
@@ -19,25 +19,12 @@ export default function Header() {
             size="icon" 
             variant="ghost" 
             className="w-10 h-10 rounded-lg border border-gray-800"
-            data-testid="button-youtube"
+            data-testid="button-twitter"
+            asChild
           >
-            <SiYoutube className="w-4 h-4" />
-          </Button>
-          <Button 
-            size="icon" 
-            variant="ghost" 
-            className="w-10 h-10 rounded-lg border border-gray-800"
-            data-testid="button-linkedin"
-          >
-            <SiLinkedin className="w-4 h-4" />
-          </Button>
-          <Button 
-            size="icon" 
-            variant="ghost" 
-            className="w-10 h-10 rounded-lg border border-gray-800"
-            data-testid="button-github"
-          >
-            <SiGithub className="w-4 h-4" />
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <SiX className="w-4 h-4" />
+            </a>
           </Button>
         </div>
       </div>
