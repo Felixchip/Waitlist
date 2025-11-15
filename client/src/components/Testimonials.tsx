@@ -43,22 +43,32 @@ export default function FAQ() {
             FAQs
           </div>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          Frequently Asked Questions.
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center max-w-4xl mx-auto leading-tight">
+          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+            Frequently Asked<br />
+            Questions.
+          </span>
         </h2>
 
-        <Accordion type="single" collapsible className="w-full">
+        <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-gray-900">
-              <AccordionTrigger className="text-left hover:no-underline py-6" data-testid={`faq-question-${idx}`}>
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-400 pb-6" data-testid={`faq-answer-${idx}`}>
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+            <div 
+              key={idx} 
+              className="p-6 rounded-2xl border border-gray-800 bg-card/50 backdrop-blur-sm"
+            >
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value={`item-${idx}`} className="border-0">
+                  <AccordionTrigger className="text-left hover:no-underline py-2" data-testid={`faq-question-${idx}`}>
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-400 pt-2" data-testid={`faq-answer-${idx}`}>
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           ))}
-        </Accordion>
+        </div>
       </div>
     </section>
   );
