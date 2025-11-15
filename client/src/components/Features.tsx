@@ -35,7 +35,7 @@ export default function Features() {
 
         <div className="flex flex-col gap-5">
           {/* Top row: 40% left, 60% right */}
-          <div className="flex gap-5">
+          <div className="flex gap-5 h-[400px]">
             <div 
               className="p-6 rounded-3xl overflow-hidden border-0"
               style={{
@@ -85,7 +85,7 @@ export default function Features() {
           </div>
 
           {/* Bottom row: 70% left, 30% right */}
-          <div className="flex gap-5">
+          <div className="flex gap-5 h-[400px]">
             <div 
               className="p-5 rounded-3xl overflow-hidden border-0"
               style={{
