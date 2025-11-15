@@ -20,14 +20,14 @@ export default function Features() {
           >
             FEATURES
           </div>
-          <h2 className="text-[64px] font-normal mb-6 max-w-4xl mx-auto leading-tight">
+          <h2 className="text-[64px] font-display font-medium mb-6 max-w-4xl mx-auto leading-[64px]">
             <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
               What you get<br />
               early access to
             </span>
           </h2>
           
-          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-[18px] font-tight leading-[22px]">
             Loyalist helps forward-thinking teams integrate cutting-edge<br />
             AI into their workflows — from research to real-time operations.
           </p>
@@ -49,7 +49,7 @@ export default function Features() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-1 text-white">AI research assistant</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
                   Automate data gathering, summarization, and insight generation across sources.
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function Features() {
               </div>
               <div className="flex-1">
                 <h3 className="text-base font-semibold mb-1 text-white">Real-time ops monitoring</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">
+                <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
                   Leverage AI to observe, flag, and optimize workflows as they happen.
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Features() {
               </div>
               <div className="flex-1">
                 <h3 className="text-base font-semibold mb-1 text-white">Custom intelligence modules</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">
+                <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
                   Tailor AI agents to your team's needs.
                 </p>
               </div>

@@ -44,7 +44,7 @@ export default function FAQ() {
             FAQs
           </div>
         </div>
-        <h2 className="text-[64px] font-normal mb-16 text-center max-w-4xl mx-auto leading-tight">
+        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px]">
           <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
             Frequently Asked<br />
             Questions.

@@ -35,7 +35,7 @@ export default function Benefits() {
             BENEFITS
           </div>
         </div>
-        <h2 className="text-[64px] font-normal mb-16 text-center max-w-4xl mx-auto leading-tight">
+        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px]">
           <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
             Why join the<br />
             Loyalist waitlist?
@@ -58,7 +58,7 @@ export default function Benefits() {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-gray-400">{benefit.desc}</p>
+              <p className="text-gray-400 text-[18px] font-tight leading-[22px]">{benefit.desc}</p>
             </Card>
           ))}
         </div>
