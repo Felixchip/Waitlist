@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div>
+          <div className="max-w-[420px]">
             <h2 className="text-2xl font-semibold mb-6" data-testid="heading-join-waitlist">
               Join waitlist
             </h2>
