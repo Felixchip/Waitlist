@@ -1,21 +1,21 @@
 import { Card } from "@/components/ui/card";
-import { Zap, TrendingUp, Users } from "lucide-react";
+import { MdBolt, MdTrendingUp, MdPeople } from "react-icons/md";
 import patternBg from "@assets/pattern-BG_1763167873077.jpg";
 
 export default function Benefits() {
   const benefits = [
     {
-      icon: Zap,
+      icon: MdBolt,
       title: "Early advantage",
       desc: "Get first-mover access to powerful AI tools before the rest of the market catches on.",
     },
     {
-      icon: TrendingUp,
+      icon: MdTrendingUp,
       title: "Boosted productivity",
       desc: "Streamline research, automate tasks, and make data-driven decisions faster than ever.",
     },
     {
-      icon: Users,
+      icon: MdPeople,
       title: "Exclusive feedback loop",
       desc: "Shape the future of Loyalist by sharing your insights during early access.",
     },
@@ -45,20 +45,16 @@ export default function Benefits() {
         <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (
             <Card key={idx} className="p-8 border-0 hover-elevate" style={{ backgroundColor: '#181725' }} data-testid={`benefit-card-${idx}`}>
-              <div className="relative w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                <div 
-                  className="absolute inset-0 rounded-full p-[2px]"
-                  style={{
-                    background: 'linear-gradient(to right, rgb(147, 197, 253), rgb(216, 180, 254), rgb(255, 255, 255))',
-                  }}
-                >
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                    <benefit.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
+              <div 
+                className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
+                style={{
+                  background: 'linear-gradient(to right, rgb(147, 197, 253), rgb(216, 180, 254), rgb(255, 255, 255))',
+                }}
+              >
+                <benefit.icon className="w-6 h-6 text-gray-900" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-gray-400 text-[18px] font-tight leading-[22px]">{benefit.desc}</p>
+              <h3 className="text-[18px] font-semibold mb-3">{benefit.title}</h3>
+              <p className="text-gray-400 text-[16px] font-tight leading-[22px]">{benefit.desc}</p>
             </Card>
           ))}
         </div>
