@@ -309,24 +309,48 @@
     font-variation-settings: 'opsz' 14;
   }
 
-  /* Hero text glow effect */
-  .hero-text {
-    position: relative;
+  /* Foggy text effect for footer */
+  .hero-container {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  .hero-text::after {
+  .hero-sharp {
+    /* Sharp top text - already has inline styles */
+  }
+
+  .hero-fog {
+    filter: blur(36px);
+    transform: translateY(6px);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%);
+    opacity: 0.95;
+    pointer-events: none;
+  }
+
+  .hero-fog::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -10px;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(to bottom,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.5) 40%,
-        rgba(255,255,255,1) 100%
-    );
-    filter: blur(35px);
+    right: 0;
+    bottom: -6%;
+    height: 40%;
     pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 40%, rgba(255,255,255,0.55) 100%);
+    filter: blur(28px);
+    transform: translateY(6px);
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  @media (max-width: 420px) {
+    .hero-fog {
+      filter: blur(22px);
+      transform: translateY(4px);
+    }
+    .hero-fog::after {
+      filter: blur(18px);
+    }
   }
 }
