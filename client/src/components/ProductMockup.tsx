@@ -34,15 +34,27 @@ export default function Benefits() {
             BENEFITS
           </div>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center max-w-3xl mx-auto">
-          Why join the Gentheri waitlist?
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center max-w-4xl mx-auto leading-tight">
+          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+            Why join the<br />
+            Gentheri waitlist?
+          </span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (
             <Card key={idx} className="p-8 bg-card border-gray-900 hover-elevate" data-testid={`benefit-card-${idx}`}>
-              <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-6">
-                <benefit.icon className="w-6 h-6 text-white" />
+              <div className="relative w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                <div 
+                  className="absolute inset-0 rounded-full p-[2px]"
+                  style={{
+                    background: 'linear-gradient(to right, rgb(147, 197, 253), rgb(216, 180, 254), rgb(255, 255, 255))',
+                  }}
+                >
+                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
               <p className="text-gray-400">{benefit.desc}</p>
