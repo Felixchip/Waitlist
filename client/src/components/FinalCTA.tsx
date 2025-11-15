@@ -4,7 +4,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { ArrowRight } from "lucide-react";
 import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1.png";
 import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
 import avatar3 from "@assets/generated_images/Professional_woman_avatar_2_3545e852.png";
@@ -81,18 +80,14 @@ export default function FinalCTA() {
             <button
               type="submit"
               disabled={signupMutation.isPending}
-              className="w-full py-3 px-6 font-medium text-white rounded-lg disabled:opacity-50 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+              className="w-full py-4 px-8 font-medium text-white rounded-lg disabled:opacity-50"
               style={{
-                background: 'linear-gradient(90deg, rgb(99, 102, 241) 0%, rgb(168, 85, 247) 100%)',
+                background: 'linear-gradient(101deg, #9573de 0%, rgb(74, 120, 195) 0%, rgb(42, 21, 87) 15.4%, rgb(41, 15, 101) 22.56%, rgb(61, 72, 161) 36.38%, rgba(92, 145, 207, 0.7) 62.51%, rgba(250, 249, 254, 0.5) 79.44%, rgb(121, 58, 255) 100%)',
+                boxShadow: 'inset 0px -4.48px 2.24px 0px rgba(0, 0, 0, 0.25), inset 0px 2.24px 1.12px 0px rgba(255, 255, 255, 0.25)',
               }}
               data-testid="button-final-cta-submit"
             >
-              {signupMutation.isPending ? "Joining..." : (
-                <>
-                  Get early access
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
+              {signupMutation.isPending ? "Joining..." : "Get early access →"}
             </button>
           </form>
 
