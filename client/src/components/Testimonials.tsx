@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import patternBg from "@assets/pattern-BG_1763167873077.jpg";
 
 export default function FAQ() {
   const faqs = [
@@ -30,7 +31,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-3xl">
         <div className="flex justify-center mb-6">
           <div 

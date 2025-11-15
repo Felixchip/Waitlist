@@ -4,10 +4,11 @@ import dashboardImg from "@assets/generated_images/AI_dashboard_mockup_52d697e2.
 import monitoringImg from "@assets/generated_images/Monitoring_dashboard_interface_57fead2a.png";
 import neuralImg from "@assets/generated_images/AI_neural_network_visual_95a7e2a1.png";
 import analyticsImg from "@assets/generated_images/Intelligence_analytics_interface_e871e986.png";
+import patternBg from "@assets/pattern-BG_1763167873077.jpg";
 
 export default function Features() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <div 

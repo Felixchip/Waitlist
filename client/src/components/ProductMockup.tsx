@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Zap, TrendingUp, Users } from "lucide-react";
+import patternBg from "@assets/pattern-BG_1763167873077.jpg";
 
 export default function Benefits() {
   const benefits = [
@@ -21,7 +22,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-7xl">
         <div className="flex justify-center mb-6">
           <div 
