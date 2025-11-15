@@ -45,10 +45,10 @@ export default function Features() {
               }}
               data-testid="feature-card-ai-research"
             >
-              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
                 <img src={dashboardImg} alt="AI Research Dashboard" className="w-full h-full object-contain opacity-80" />
               </div>
-              <div className="bg-[#1a1828] p-6">
+              <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">AI research assistant</h3>
                 <p className="text-gray-400 text-sm">
                   Automate data gathering, summarization, and insight generation across sources.
@@ -65,10 +65,10 @@ export default function Features() {
               }}
               data-testid="feature-card-ops-monitoring"
             >
-              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
                 <img src={monitoringImg} alt="Real-time ops monitoring" className="w-full h-full object-contain opacity-80" />
               </div>
-              <div className="bg-[#1a1828] p-6">
+              <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Real-time ops monitoring</h3>
                 <p className="text-gray-400 text-sm">
                   Leverage AI to observe, flag, and optimize workflows as they happen.
@@ -88,10 +88,10 @@ export default function Features() {
               }}
               data-testid="feature-card-intelligence"
             >
-              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
                 <img src={neuralImg} alt="Custom intelligence modules" className="w-full h-full object-contain opacity-80" />
               </div>
-              <div className="bg-[#1a1828] p-6">
+              <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Custom intelligence modules</h3>
                 <p className="text-gray-400 text-sm">
                   Tailor AI agents to your team's needs.
@@ -108,10 +108,10 @@ export default function Features() {
               }}
               data-testid="feature-card-analytics"
             >
-              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
                 <img src={analyticsImg} alt="Analysis completed" className="w-full h-full object-contain opacity-80" />
               </div>
-              <div className="bg-[#1a1828] p-6">
+              <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Analysis completed</h3>
                 <p className="text-gray-400 text-sm">Preparing full report</p>
               </div>
