@@ -45,8 +45,8 @@ export default function Features() {
               }}
               data-testid="feature-card-ai-research"
             >
-              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
-                <img src={dashboardImg} alt="AI Research Dashboard" className="w-full h-full object-contain opacity-80" />
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center">
+                <img src={dashboardImg} alt="AI Research Dashboard" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">AI research assistant</h3>
@@ -65,8 +65,8 @@ export default function Features() {
               }}
               data-testid="feature-card-ops-monitoring"
             >
-              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
-                <img src={monitoringImg} alt="Real-time ops monitoring" className="w-full h-full object-contain opacity-80" />
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center">
+                <img src={monitoringImg} alt="Real-time ops monitoring" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Real-time ops monitoring</h3>
@@ -88,8 +88,8 @@ export default function Features() {
               }}
               data-testid="feature-card-intelligence"
             >
-              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
-                <img src={neuralImg} alt="Custom intelligence modules" className="w-full h-full object-contain opacity-80" />
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center">
+                <img src={neuralImg} alt="Custom intelligence modules" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Custom intelligence modules</h3>
@@ -108,8 +108,8 @@ export default function Features() {
               }}
               data-testid="feature-card-analytics"
             >
-              <div className="h-[240px] bg-gray-600 flex items-center justify-center p-6">
-                <img src={analyticsImg} alt="Analysis completed" className="w-full h-full object-contain opacity-80" />
+              <div className="h-[240px] bg-gray-600 flex items-center justify-center">
+                <img src={analyticsImg} alt="Analysis completed" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Analysis completed</h3>
