@@ -48,10 +48,10 @@ export default function Benefits() {
               <div 
                 className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
                 style={{
-                  background: 'linear-gradient(to right, rgb(147, 197, 253), rgb(216, 180, 254), rgb(255, 255, 255))',
+                  background: 'linear-gradient(to bottom, #ffffff 0%, #f0f0ff 20%, #2b3ea7 60%, #0a0a28 100%)',
                 }}
               >
-                <benefit.icon className="w-6 h-6 text-gray-900" />
+                <benefit.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-[18px] font-semibold mb-3">{benefit.title}</h3>
               <p className="text-gray-400 text-[16px] font-tight leading-[22px]">{benefit.desc}</p>
