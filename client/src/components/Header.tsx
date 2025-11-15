@@ -15,17 +15,24 @@ export default function Header() {
         </p>
 
         <div className="flex items-center gap-2">
-          <Button 
-            size="icon" 
-            variant="ghost" 
-            className="w-10 h-10 rounded-lg border border-gray-800"
-            data-testid="button-twitter"
-            asChild
+          <div 
+            className="rounded-lg p-[1px]"
+            style={{
+              background: 'linear-gradient(to bottom, #ffffff 0%, #f0f0ff 20%, #2b3ea7 60%, #0a0a28 100%)',
+            }}
           >
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <SiX className="w-4 h-4" />
-            </a>
-          </Button>
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              className="w-10 h-10 rounded-lg bg-black border-0"
+              data-testid="button-twitter"
+              asChild
+            >
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <SiX className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
