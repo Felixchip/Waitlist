@@ -8,6 +8,7 @@ import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1
 import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
 import avatar3 from "@assets/generated_images/Professional_woman_avatar_2_3545e852.png";
 import avatar4 from "@assets/generated_images/Professional_man_avatar_2_0f216362.png";
+import footerBg from "@assets/k4J9RnXzq8onAWUV0ZjXbgU8TlE (1) (1)_1763168769700.jpg";
 
 export default function FinalCTA() {
   const [name, setName] = useState("");
@@ -43,7 +44,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6" style={{ backgroundImage: `url(${footerBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-md">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
