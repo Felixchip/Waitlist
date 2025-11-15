@@ -1,4 +1,4 @@
-import footerBg from "@assets/k4J9RnXzq8onAWUV0ZjXbgU8TlE (1) (1)_1763168769700.jpg";
+import footerBg from "@assets/footer-gradient-bg.jpg";
 
 export default function Footer() {
   return (

@@ -8,7 +8,7 @@ import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1
 import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
 import avatar3 from "@assets/generated_images/Professional_woman_avatar_2_3545e852.png";
 import avatar4 from "@assets/generated_images/Professional_man_avatar_2_0f216362.png";
-import footerBg from "@assets/k4J9RnXzq8onAWUV0ZjXbgU8TlE (1) (1)_1763168769700.jpg";
+import footerBg from "@assets/footer-gradient-bg.jpg";
 
 export default function FinalCTA() {
   const [name, setName] = useState("");
