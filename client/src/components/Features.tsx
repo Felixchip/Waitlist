@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import dashboardImg from "@assets/generated_images/AI_dashboard_mockup_52d697e2.png";
-import monitoringImg from "@assets/generated_images/Monitoring_dashboard_interface_57fead2a.png";
-import neuralImg from "@assets/generated_images/AI_neural_network_visual_95a7e2a1.png";
-import analyticsImg from "@assets/generated_images/Intelligence_analytics_interface_e871e986.png";
+import aiAgentsImg from "@assets/image_1763245862992.png";
+import monitoringImg from "@assets/image_1763245872551.png";
+import intelligenceImg from "@assets/image_1763245881337.png";
+import analyticsImg from "@assets/image_1763245891001.png";
 import patternBg from "@assets/pattern-BG_1763167873077.jpg";
 
 export default function Features() {
@@ -46,7 +46,7 @@ export default function Features() {
               data-testid="feature-card-ai-research"
             >
               <div className="h-[240px] bg-gray-600 flex items-center justify-center">
-                <img src={dashboardImg} alt="AI Research Dashboard" className="w-full h-full object-cover" />
+                <img src={aiAgentsImg} alt="AI Research Dashboard" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">AI research assistant</h3>
@@ -89,7 +89,7 @@ export default function Features() {
               data-testid="feature-card-intelligence"
             >
               <div className="h-[240px] bg-gray-600 flex items-center justify-center">
-                <img src={neuralImg} alt="Custom intelligence modules" className="w-full h-full object-cover" />
+                <img src={intelligenceImg} alt="Custom intelligence modules" className="w-full h-full object-cover" />
               </div>
               <div className="bg-[#1a1828] p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-2 text-white">Custom intelligence modules</h3>
