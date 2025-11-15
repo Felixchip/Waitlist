@@ -37,49 +37,42 @@ export default function Features() {
           {/* Top row: 40% left, 60% right */}
           <div className="flex gap-5 h-[400px]">
             <div 
-              className="p-6 rounded-3xl overflow-hidden border-0"
+              className="rounded-3xl overflow-hidden border-0 flex flex-col"
               style={{
                 width: '40%',
-                background: 'rgba(30, 35, 55, 0.6)',
+                background: '#181725',
                 boxShadow: '0 6px 18px rgba(2,6,23,0.6)',
               }}
               data-testid="feature-card-ai-research"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <span className="text-white text-xl font-bold">AI</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-1 text-white">AI research assistant</h3>
-                  <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
-                    Automate data gathering, summarization, and insight generation across sources.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-indigo-950/40 to-purple-950/20 rounded-2xl p-6 aspect-video flex items-center justify-center">
+              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
                 <img src={dashboardImg} alt="AI Research Dashboard" className="w-full h-full object-contain opacity-80" />
+              </div>
+              <div className="bg-[#1a1828] p-6">
+                <h3 className="text-xl font-semibold mb-2 text-white">AI research assistant</h3>
+                <p className="text-gray-400 text-sm">
+                  Automate data gathering, summarization, and insight generation across sources.
+                </p>
               </div>
             </div>
 
             <div 
-              className="p-5 rounded-3xl overflow-hidden border-0"
+              className="rounded-3xl overflow-hidden border-0 flex flex-col"
               style={{
                 width: '60%',
-                background: 'rgba(30, 35, 55, 0.6)',
+                background: '#181725',
                 boxShadow: '0 6px 18px rgba(2,6,23,0.6)',
               }}
               data-testid="feature-card-ops-monitoring"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold mb-1 text-white">Real-time ops monitoring</h3>
-                  <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
-                    Leverage AI to observe, flag, and optimize workflows as they happen.
-                  </p>
-                </div>
+              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+                <img src={monitoringImg} alt="Real-time ops monitoring" className="w-full h-full object-contain opacity-80" />
+              </div>
+              <div className="bg-[#1a1828] p-6">
+                <h3 className="text-xl font-semibold mb-2 text-white">Real-time ops monitoring</h3>
+                <p className="text-gray-400 text-sm">
+                  Leverage AI to observe, flag, and optimize workflows as they happen.
+                </p>
               </div>
             </div>
           </div>
@@ -87,44 +80,40 @@ export default function Features() {
           {/* Bottom row: 70% left, 30% right */}
           <div className="flex gap-5 h-[400px]">
             <div 
-              className="p-5 rounded-3xl overflow-hidden border-0"
+              className="rounded-3xl overflow-hidden border-0 flex flex-col"
               style={{
                 width: '70%',
-                background: 'rgba(30, 35, 55, 0.6)',
+                background: '#181725',
                 boxShadow: '0 6px 18px rgba(2,6,23,0.6)',
               }}
               data-testid="feature-card-intelligence"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <span className="text-2xl">⚙️</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold mb-1 text-white">Custom intelligence modules</h3>
-                  <p className="text-gray-400 text-[18px] font-tight leading-[22px]">
-                    Tailor AI agents to your team's needs.
-                  </p>
-                </div>
+              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+                <img src={neuralImg} alt="Custom intelligence modules" className="w-full h-full object-contain opacity-80" />
+              </div>
+              <div className="bg-[#1a1828] p-6">
+                <h3 className="text-xl font-semibold mb-2 text-white">Custom intelligence modules</h3>
+                <p className="text-gray-400 text-sm">
+                  Tailor AI agents to your team's needs.
+                </p>
               </div>
             </div>
 
             <div 
-              className="p-5 rounded-3xl overflow-hidden border-0"
+              className="rounded-3xl overflow-hidden border-0 flex flex-col"
               style={{
                 width: '30%',
-                background: 'rgba(30, 35, 55, 0.6)',
+                background: '#181725',
                 boxShadow: '0 6px 18px rgba(2,6,23,0.6)',
               }}
               data-testid="feature-card-analytics"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <span className="text-2xl">👤</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold mb-0.5 text-white">Analysis completed</h3>
-                  <p className="text-gray-400 text-xs">Preparing full report</p>
-                </div>
+              <div className="flex-1 bg-gray-600 flex items-center justify-center p-6">
+                <img src={analyticsImg} alt="Analysis completed" className="w-full h-full object-contain opacity-80" />
+              </div>
+              <div className="bg-[#1a1828] p-6">
+                <h3 className="text-xl font-semibold mb-2 text-white">Analysis completed</h3>
+                <p className="text-gray-400 text-sm">Preparing full report</p>
               </div>
             </div>
           </div>
