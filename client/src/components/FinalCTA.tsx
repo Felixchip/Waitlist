@@ -43,7 +43,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="py-32 px-6 border-t border-gray-900">
+    <section className="py-32 px-6">
       <div className="container mx-auto max-w-md">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">

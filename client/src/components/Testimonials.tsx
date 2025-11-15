@@ -54,7 +54,8 @@ export default function FAQ() {
           {faqs.map((faq, idx) => (
             <div 
               key={idx} 
-              className="p-6 rounded-2xl border border-gray-800 bg-card/50 backdrop-blur-sm"
+              className="p-6 rounded-2xl border-0"
+              style={{ backgroundColor: '#181725' }}
             >
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value={`item-${idx}`} className="border-0">

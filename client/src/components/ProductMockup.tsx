@@ -43,7 +43,7 @@ export default function Benefits() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (
-            <Card key={idx} className="p-8 bg-card border-gray-900 hover-elevate" data-testid={`benefit-card-${idx}`}>
+            <Card key={idx} className="p-8 border-0 hover-elevate" style={{ backgroundColor: '#181725' }} data-testid={`benefit-card-${idx}`}>
               <div className="relative w-12 h-12 rounded-full flex items-center justify-center mb-6">
                 <div 
                   className="absolute inset-0 rounded-full p-[2px]"
