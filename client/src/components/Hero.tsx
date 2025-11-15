@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="bg-card/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+          <div>
             <h2 className="text-2xl font-semibold mb-6" data-testid="heading-join-waitlist">
               Join waitlist
             </h2>
