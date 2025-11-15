@@ -20,7 +20,7 @@ export default function Features() {
           >
             FEATURES
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+          <h2 className="text-[64px] font-normal mb-6 max-w-4xl mx-auto leading-tight">
             <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
               What you get<br />
               early access to
