@@ -9,19 +9,19 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How much time do I need each week?",
-      answer: "Gentheri is designed to save you time, not consume it. Most teams spend just 10-15 minutes per week reviewing AI-generated insights and reports. The platform works continuously in the background, so you only engage when needed.",
+      answer: "Loyalist is designed to save you time, not consume it. Most teams spend just 10-15 minutes per week reviewing AI-generated insights and reports. The platform works continuously in the background, so you only engage when needed.",
     },
     {
       question: "Do I need a tech or coding background?",
-      answer: "Not at all. Gentheri is built for everyone, from technical teams to non-technical users. Our intuitive interface requires no coding knowledge. If you can use email, you can use Gentheri.",
+      answer: "Not at all. Loyalist is built for everyone, from technical teams to non-technical users. Our intuitive interface requires no coding knowledge. If you can use email, you can use Loyalist.",
     },
     {
       question: "What makes this better than free tutorials?",
-      answer: "While tutorials are helpful, Gentheri provides real-time, actionable intelligence tailored to your specific business needs. Instead of generic advice, you get customized insights that directly impact your operations and decision-making.",
+      answer: "While tutorials are helpful, Loyalist provides real-time, actionable intelligence tailored to your specific business needs. Instead of generic advice, you get customized insights that directly impact your operations and decision-making.",
     },
     {
       question: "Can I take a break if life gets busy?",
-      answer: "Absolutely. Gentheri continues working even when you're away. Your AI agents keep monitoring and gathering insights. When you return, everything is waiting for you, organized and ready to review.",
+      answer: "Absolutely. Loyalist continues working even when you're away. Your AI agents keep monitoring and gathering insights. When you return, everything is waiting for you, organized and ready to review.",
     },
     {
       question: "Will I get all course updates for free?",

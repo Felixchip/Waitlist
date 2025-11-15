@@ -25,7 +25,7 @@ export default function Hero() {
     onSuccess: () => {
       toast({
         title: "You're in!",
-        description: "We'll notify you when Gentheri launches.",
+        description: "We'll notify you when Loyalist launches.",
       });
       setName("");
       setEmail("");
@@ -86,7 +86,7 @@ export default function Hero() {
               className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-xl"
               data-testid="text-hero-description"
             >
-              Gentheri helps forward-thinking teams integrate cutting-edge AI into their workflows—from research to real-time operations.
+              Loyalist helps forward-thinking teams integrate cutting-edge AI into their workflows—from research to real-time operations.
             </p>
 
             <div>

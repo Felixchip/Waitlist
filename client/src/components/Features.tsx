@@ -27,7 +27,7 @@ export default function Features() {
           </h2>
           
           <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Gentheri helps forward-thinking teams integrate cutting-edge<br />
+            Loyalist helps forward-thinking teams integrate cutting-edge<br />
             AI into their workflows — from research to real-time operations.
           </p>
         </div>

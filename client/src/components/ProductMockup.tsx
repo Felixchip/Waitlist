@@ -16,7 +16,7 @@ export default function Benefits() {
     {
       icon: Users,
       title: "Exclusive feedback loop",
-      desc: "Shape the future of Gentheri by sharing your insights during early access.",
+      desc: "Shape the future of Loyalist by sharing your insights during early access.",
     },
   ];
 
@@ -37,7 +37,7 @@ export default function Benefits() {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center max-w-4xl mx-auto leading-tight">
           <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
             Why join the<br />
-            Gentheri waitlist?
+            Loyalist waitlist?
           </span>
         </h2>
 

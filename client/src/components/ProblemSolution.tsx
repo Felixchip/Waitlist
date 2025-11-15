@@ -29,7 +29,7 @@ export default function WaitlistForm() {
     onSuccess: () => {
       toast({
         title: "You're in!",
-        description: "We'll notify you when Gentheri launches.",
+        description: "We'll notify you when Loyalist launches.",
       });
       setName("");
       setEmail("");

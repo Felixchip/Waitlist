@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container mx-auto max-w-7xl flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-purple-600" />
-          <span className="text-lg font-semibold" data-testid="text-logo">Gentheri AI</span>
+          <span className="text-lg font-semibold" data-testid="text-logo">Loyalist AI</span>
         </div>
 
         <p className="text-xs tracking-widest text-gray-400 uppercase hidden md:block" data-testid="text-launch-date">
