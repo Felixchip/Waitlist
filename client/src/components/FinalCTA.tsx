@@ -105,7 +105,6 @@ export default function FinalCTA() {
                 JOIN 20K OTHERS
               </p>
             </div>
-            <p className="text-sm text-gray-500">You</p>
           </div>
         </div>
       </div>
