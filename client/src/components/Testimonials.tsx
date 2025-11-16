@@ -34,9 +34,17 @@ export default function FAQ() {
   return (
     <section className="py-32 px-6 relative" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-3xl relative">
-        <div className="flex justify-center mb-6">
+        <div className="absolute top-[94px] left-1/2 -translate-x-1/2 pointer-events-none z-0">
+          <img 
+            src={faqCircles} 
+            alt="" 
+            className="w-[518px] h-auto opacity-80"
+          />
+        </div>
+        
+        <div className="flex justify-center mb-6 relative z-10">
           <div 
-            className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm relative z-10"
+            className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm"
             style={{
               background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
             }}
@@ -46,24 +54,14 @@ export default function FAQ() {
           </div>
         </div>
         
-        <div className="relative">
-          <div className="absolute top-[-130px] left-1/2 -translate-x-1/2 pointer-events-none z-0">
-            <img 
-              src={faqCircles} 
-              alt="" 
-              className="w-[518px] h-auto opacity-80"
-            />
-          </div>
-          
-          <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px] relative z-10">
-            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
-              Frequently Asked<br />
-              Questions.
-            </span>
-          </h2>
-        </div>
+        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px] relative z-10">
+          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+            Frequently Asked<br />
+            Questions.
+          </span>
+        </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-4 relative z-10">
           {faqs.map((faq, idx) => (
             <div 
               key={idx} 
