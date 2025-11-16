@@ -63,7 +63,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 relative z-10">
           {faqs.map((faq, idx) => (
             <div 
               key={idx} 
