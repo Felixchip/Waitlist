@@ -76,7 +76,7 @@ export default function Hero() {
             </div>
             
             <h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight"
+              className="text-[64px] font-medium tracking-tight mb-6 leading-[64px]"
               data-testid="heading-hero"
             >
               Get Ahead with{" "}
