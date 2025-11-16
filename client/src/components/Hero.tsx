@@ -211,23 +211,9 @@ export default function Hero() {
         .animate-marquee {
           animation: marquee 15s linear infinite;
         }
-        .marquee-container::before,
-        .marquee-container::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 60px;
-          z-index: 10;
-          pointer-events: none;
-        }
-        .marquee-container::before {
-          left: 0;
-          background: linear-gradient(to right, #000000 0%, transparent 100%);
-        }
-        .marquee-container::after {
-          right: 0;
-          background: linear-gradient(to left, #000000 0%, transparent 100%);
+        .marquee-container {
+          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60px, black calc(100% - 60px), transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 60px, black calc(100% - 60px), transparent 100%);
         }
       `}</style>
     </section>
