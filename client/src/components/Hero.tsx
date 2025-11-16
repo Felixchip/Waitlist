@@ -63,8 +63,8 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-          <div>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+          <div className="flex-1">
             <div 
               className="mb-8 px-3 py-1.5 text-xs tracking-wider text-white rounded-full w-fit backdrop-blur-sm"
               style={{
@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="max-w-[420px]">
+          <div className="w-[460px]">
             <h2 className="text-2xl font-semibold mb-6" data-testid="heading-join-waitlist">
               Join waitlist
             </h2>
