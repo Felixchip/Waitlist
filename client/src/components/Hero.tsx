@@ -63,7 +63,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div>
             <div 
               className="mb-8 px-3 py-1.5 text-xs tracking-wider text-white rounded-full w-fit backdrop-blur-sm"
