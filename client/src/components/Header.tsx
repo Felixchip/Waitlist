@@ -10,10 +10,6 @@ export default function Header() {
           <span className="text-lg font-semibold" data-testid="text-logo">Loyalist AI</span>
         </div>
 
-        <p className="text-xs tracking-widest text-gray-400 uppercase hidden md:block" data-testid="text-launch-date">
-          LAUNCHING ON 25TH JUNE 2025
-        </p>
-
         <div className="flex items-center gap-2">
           <div 
             className="rounded-lg p-[1px]"
