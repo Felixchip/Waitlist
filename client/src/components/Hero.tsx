@@ -94,7 +94,7 @@ export default function Hero() {
               <p className="text-xs text-gray-500 mb-4 tracking-wider uppercase" data-testid="text-backed-by">
                 BACKED BY
               </p>
-              <div className="overflow-hidden max-w-[518px]">
+              <div className="overflow-hidden max-w-[518px] relative marquee-container">
                 <div className="flex items-center gap-8 opacity-60 animate-marquee">
                   <div className="flex items-center gap-8 shrink-0">
                     <div className="flex items-center gap-2">
@@ -210,6 +210,24 @@ export default function Hero() {
         }
         .animate-marquee {
           animation: marquee 15s linear infinite;
+        }
+        .marquee-container::before,
+        .marquee-container::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 60px;
+          z-index: 10;
+          pointer-events: none;
+        }
+        .marquee-container::before {
+          left: 0;
+          background: linear-gradient(to right, #000000 0%, transparent 100%);
+        }
+        .marquee-container::after {
+          right: 0;
+          background: linear-gradient(to left, #000000 0%, transparent 100%);
         }
       `}</style>
     </section>
