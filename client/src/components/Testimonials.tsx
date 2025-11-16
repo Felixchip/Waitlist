@@ -32,8 +32,16 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      <div className="container mx-auto max-w-3xl">
+    <section className="py-32 px-6 relative" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img 
+          src={faqCircles} 
+          alt="" 
+          className="w-full max-w-[432px] h-auto opacity-80"
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-3xl relative z-10">
         <div className="flex justify-center mb-6">
           <div 
             className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm"
@@ -46,19 +54,12 @@ export default function FAQ() {
           </div>
         </div>
         
-        <div className="relative flex items-center justify-center mb-16">
-          <img 
-            src={faqCircles} 
-            alt="" 
-            className="w-full max-w-[720px] h-auto"
-          />
-          <h2 className="absolute text-[64px] font-display font-medium text-center max-w-4xl leading-[64px]">
-            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
-              Frequently Asked<br />
-              Questions.
-            </span>
-          </h2>
-        </div>
+        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px]">
+          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+            Frequently Asked<br />
+            Questions.
+          </span>
+        </h2>
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
