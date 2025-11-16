@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import patternBg from "@assets/pattern-BG_1763167873077.jpg";
+import faqCircles from "@assets/image_1763299180575.png";
 
 export default function FAQ() {
   const faqs = [
@@ -44,12 +45,20 @@ export default function FAQ() {
             FAQs
           </div>
         </div>
-        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px]">
-          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
-            Frequently Asked<br />
-            Questions.
-          </span>
-        </h2>
+        
+        <div className="relative flex items-center justify-center mb-16">
+          <img 
+            src={faqCircles} 
+            alt="" 
+            className="w-full max-w-[720px] h-auto"
+          />
+          <h2 className="absolute text-[64px] font-display font-medium text-center max-w-4xl leading-[64px]">
+            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+              Frequently Asked<br />
+              Questions.
+            </span>
+          </h2>
+        </div>
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
