@@ -47,7 +47,7 @@ export default function FAQ() {
         </div>
         
         <div className="relative">
-          <div className="absolute top-[60px] left-1/2 -translate-x-1/2 pointer-events-none z-0">
+          <div className="absolute top-[-130px] left-1/2 -translate-x-1/2 pointer-events-none z-0">
             <img 
               src={faqCircles} 
               alt="" 
