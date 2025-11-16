@@ -32,19 +32,18 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-32 px-6 relative" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img 
-          src={faqCircles} 
-          alt="" 
-          className="w-full max-w-[432px] h-auto opacity-80"
-        />
-      </div>
-      
-      <div className="container mx-auto max-w-3xl relative z-10">
-        <div className="flex justify-center mb-6">
+    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="container mx-auto max-w-3xl">
+        <div className="flex justify-center mb-6 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <img 
+              src={faqCircles} 
+              alt="" 
+              className="w-[432px] h-auto opacity-80"
+            />
+          </div>
           <div 
-            className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm"
+            className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm relative z-10"
             style={{
               background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
             }}
