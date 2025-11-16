@@ -32,16 +32,9 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-32 px-6" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      <div className="container mx-auto max-w-3xl">
-        <div className="flex justify-center mb-6 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-            <img 
-              src={faqCircles} 
-              alt="" 
-              className="w-[432px] h-auto opacity-80"
-            />
-          </div>
+    <section className="py-32 px-6 relative" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="container mx-auto max-w-3xl relative">
+        <div className="flex justify-center mb-6">
           <div 
             className="px-3 py-1.5 text-xs tracking-wider text-white rounded-full backdrop-blur-sm relative z-10"
             style={{
@@ -53,12 +46,22 @@ export default function FAQ() {
           </div>
         </div>
         
-        <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px]">
-          <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
-            Frequently Asked<br />
-            Questions.
-          </span>
-        </h2>
+        <div className="relative">
+          <div className="absolute top-[60px] left-1/2 -translate-x-1/2 pointer-events-none z-0">
+            <img 
+              src={faqCircles} 
+              alt="" 
+              className="w-[518px] h-auto opacity-80"
+            />
+          </div>
+          
+          <h2 className="text-[64px] font-display font-medium mb-16 text-center max-w-4xl mx-auto leading-[64px] relative z-10">
+            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-white bg-clip-text text-transparent">
+              Frequently Asked<br />
+              Questions.
+            </span>
+          </h2>
+        </div>
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
