@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-center">
       <div 
-        className="flex items-center gap-10 px-6 py-3 rounded-full backdrop-blur-md"
+        className="flex items-center gap-16 px-6 py-3 rounded-full backdrop-blur-md"
         style={{
           background: 'rgba(24, 23, 37, 0.6)',
           border: '1px solid rgba(255, 255, 255, 0.1)',

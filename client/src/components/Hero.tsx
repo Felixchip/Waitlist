@@ -84,7 +84,7 @@ export default function Hero() {
             </h1>
             
             <p 
-              className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-xl"
+              className="text-[16px] text-gray-400 mb-12 leading-relaxed max-w-[518px]"
               data-testid="text-hero-description"
             >
               Loyalist helps forward-thinking teams integrate cutting-edge AI into their workflows—from research to real-time operations.
@@ -94,31 +94,55 @@ export default function Hero() {
               <p className="text-xs text-gray-500 mb-4 tracking-wider uppercase" data-testid="text-backed-by">
                 BACKED BY
               </p>
-              <div className="flex items-center gap-8 opacity-60">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-                    <span className="text-xs">S</span>
+              <div className="overflow-hidden max-w-[518px]">
+                <div className="flex items-center gap-8 opacity-60 animate-marquee">
+                  <div className="flex items-center gap-8 shrink-0">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">S</span>
+                      </div>
+                      <span className="text-sm">Spherule</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">B</span>
+                      </div>
+                      <span className="text-sm">Boltshift</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">N</span>
+                      </div>
+                      <span className="text-sm">Neutron</span>
+                    </div>
                   </div>
-                  <span className="text-sm">Spherule</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-                    <span className="text-xs">B</span>
+                  <div className="flex items-center gap-8 shrink-0">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">S</span>
+                      </div>
+                      <span className="text-sm">Spherule</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">B</span>
+                      </div>
+                      <span className="text-sm">Boltshift</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <span className="text-xs">N</span>
+                      </div>
+                      <span className="text-sm">Neutron</span>
+                    </div>
                   </div>
-                  <span className="text-sm">Boltshift</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-                    <span className="text-xs">N</span>
-                  </div>
-                  <span className="text-sm">Neutron</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="w-[460px]">
-            <h2 className="text-2xl font-semibold mb-6" data-testid="heading-join-waitlist">
+            <h2 className="text-[32px] font-medium mb-6" data-testid="heading-join-waitlist">
               Join waitlist
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -179,6 +203,13 @@ export default function Hero() {
         @keyframes twinkle {
           0%, 100% { opacity: 0.2; }
           50% { opacity: 0.5; }
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 15s linear infinite;
         }
       `}</style>
     </section>
