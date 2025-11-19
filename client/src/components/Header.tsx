@@ -30,7 +30,7 @@ export default function Header() {
               data-testid="button-twitter"
               asChild
             >
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/felixchip" target="_blank" rel="noopener noreferrer">
                 <SiX className="w-4 h-4" />
               </a>
             </Button>

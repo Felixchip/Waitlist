@@ -63,10 +63,10 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-          <div className="flex-1">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8">
+          <div className="flex-1 w-full lg:w-auto">
             <div 
-              className="mb-8 px-3 py-1.5 text-xs tracking-wider text-white rounded-full w-fit backdrop-blur-sm"
+              className="mb-6 lg:mb-8 px-3 py-1.5 text-xs tracking-wider text-white rounded-full w-fit backdrop-blur-sm"
               style={{
                 background: 'linear-gradient(103deg, #0a0913 0%, rgb(17, 8, 34) 8.75%, rgb(41, 15, 101) 24.32%, rgb(61, 72, 161) 38.77%, rgb(74, 120, 195) 54.74%, rgba(92, 145, 207, 0.7) 66%, rgba(250, 249, 254, 0.5) 83.78%, rgb(209, 214, 226) 100%)',
               }}
@@ -76,7 +76,7 @@ export default function Hero() {
             </div>
             
             <h1 
-              className="text-[64px] font-medium tracking-tight mb-6 leading-[64px]"
+              className="text-4xl md:text-5xl lg:text-[64px] font-medium tracking-tight mb-4 lg:mb-6 leading-tight lg:leading-[64px]"
               data-testid="heading-hero"
             >
               Get Ahead with{" "}
@@ -84,17 +84,17 @@ export default function Hero() {
             </h1>
             
             <p 
-              className="text-[16px] text-gray-400 mb-12 leading-relaxed max-w-[518px]"
+              className="text-sm md:text-base lg:text-[16px] text-gray-400 mb-8 lg:mb-12 leading-relaxed max-w-full lg:max-w-[518px]"
               data-testid="text-hero-description"
             >
               Loyalist helps forward-thinking teams integrate cutting-edge AI into their workflows—from research to real-time operations.
             </p>
 
-            <div>
+            <div className="mb-8 lg:mb-0">
               <p className="text-xs text-gray-500 mb-4 tracking-wider uppercase" data-testid="text-backed-by">
                 BACKED BY
               </p>
-              <div className="overflow-hidden max-w-[518px] relative marquee-container">
+              <div className="overflow-hidden w-full lg:max-w-[518px] relative marquee-container">
                 <div className="flex items-center gap-8 opacity-60 animate-marquee">
                   <div className="flex items-center gap-8 shrink-0">
                     <div className="flex items-center gap-2">
@@ -141,8 +141,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-[460px]">
-            <h2 className="text-[32px] font-medium mb-6" data-testid="heading-join-waitlist">
+          <div className="w-full lg:w-[460px]">
+            <h2 className="text-2xl lg:text-[32px] font-medium mb-4 lg:mb-6" data-testid="heading-join-waitlist">
               Join waitlist
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
