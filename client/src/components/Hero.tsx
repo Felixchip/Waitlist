@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center px-6 pt-24 pb-16 relative overflow-hidden" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="min-h-screen flex items-center px-6 pt-36 lg:pt-24 pb-16 relative overflow-hidden" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(100,100,100,0.05),transparent_50%)]" />
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
