@@ -17,7 +17,6 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <button class='btn' data-testid="button-react">React button</button>
           <div 
             className="rounded-lg p-[1px]"
             style={{
