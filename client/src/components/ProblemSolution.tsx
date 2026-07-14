@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { CheckCircle } from "lucide-react";
 import avatar1 from "@assets/generated_images/Professional_woman_avatar_913fd8b1.png";
 import avatar2 from "@assets/generated_images/Professional_man_avatar_86fad433.png";
@@ -21,31 +19,21 @@ export default function WaitlistForm() {
   const { toast } = useToast();
 
   const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const signupMutation = useMutation({
-    mutationFn: async (data: { firstName: string; email: string }) => {
-      return apiRequest("/api/waitlist", "POST", data);
-    },
-    onSuccess: () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !email) return;
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
       toast({
         title: "You're in!",
         description: "We'll notify you when Loyalist launches.",
       });
       setName("");
       setEmail("");
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Error",
-        description: error.message || "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    signupMutation.mutate({ firstName: name, email });
+    }, 800);
   };
 
   return (
@@ -77,11 +65,11 @@ export default function WaitlistForm() {
               />
               <Button
                 type="submit"
-                disabled={signupMutation.isPending}
+                disabled={isSubmitting}
                 className="h-14 px-8 w-full font-medium"
                 data-testid="button-waitlist-submit"
               >
-                {signupMutation.isPending ? "Joining..." : "Get early access"}
+                {isSubmitting ? "Joining..." : "Get early access"}
               </Button>
             </form>
           </div>
